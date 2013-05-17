@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class HostingFragment extends Fragment {
+public class PageListFragment extends Fragment {
 
 	private String mParentString;
 
-	public HostingFragment() {
+	public PageListFragment() {
 		// Required empty public constructor
 	}
 
