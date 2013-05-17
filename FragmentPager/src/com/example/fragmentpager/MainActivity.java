@@ -31,7 +31,7 @@ public class MainActivity extends FragmentActivity {
 	private Fragment newHostingFragment(String mHostingLevel, String oldPosition) {
 		Fragment hostingFragment = new PageListFragment();
 		Bundle args = new Bundle();
-		args.putString(ARG_PARENTS, mHostingLevel + oldPosition +">");
+		args.putString(ARG_PARENTS, mHostingLevel + oldPosition +" > ");
 		hostingFragment.setArguments(args);
 		return hostingFragment;
 	}

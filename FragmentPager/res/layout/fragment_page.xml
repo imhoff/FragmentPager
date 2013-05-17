@@ -18,9 +18,6 @@
 		android:id="@+id/button"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_alignLeft="@+id/TextView1"
-		android:layout_alignRight="@+id/TextView1"
-		android:layout_below="@+id/TextView1"
-		android:text="Go Inside" />
+		android:layout_below="@+id/textView" android:layout_centerHorizontal="true" android:text="Go Inside"/>
 
 </RelativeLayout>

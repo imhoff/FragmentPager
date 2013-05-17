@@ -34,7 +34,7 @@ public class PageFragment extends Fragment {
 		mPosition = getArguments().getInt(ARG_POSITION);
 		mHostingLevel = getArguments().getString(MainActivity.ARG_PARENTS);
 		TextView text = (TextView) contentView.findViewById(R.id.textView);
-		text.setText(mHostingLevel + mPosition);
+		text.setText("Parent Fragments " + mHostingLevel + " \n\nCurrent Fragment "+ mPosition);
 	}
 
 	private void setupButton(View contentView) {
