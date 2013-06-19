@@ -38,8 +38,9 @@ public class MainActivity extends FragmentActivity {
 
 	private void addFragment(Fragment hostingFragment) {
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.replace(R.id.fragmentSpace, hostingFragment, CURRENT_FRAGMENT);
+		transaction.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
 		transaction.addToBackStack(null);
+		transaction.replace(R.id.fragmentSpace, hostingFragment, CURRENT_FRAGMENT);
 		transaction.commit();
 	}
 
