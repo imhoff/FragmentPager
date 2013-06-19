@@ -33,7 +33,7 @@ public class PageListFragment extends Fragment {
 	public void onResume() {
 		mParentString = getArguments().getString(MainActivity.ARG_PARENTS);
 		ViewPager viewPager = (ViewPager) getView().findViewById(R.id.viewPager);
-		viewPager.setAdapter(new SimpleFragmentStatePagerAdapter(getFragmentManager(),mParentString));
+		viewPager.setAdapter(new SimpleFragmentStatePagerAdapter(getChildFragmentManager(),mParentString));
 		super.onResume();
 	}
 	
@@ -59,6 +59,11 @@ public class PageListFragment extends Fragment {
 		@Override
 		public int getCount() {
 			return 5;
+		}
+		
+		@Override
+		public int getItemPosition(Object object) {
+			return POSITION_NONE;
 		}
 	}
 }
