@@ -5,12 +5,13 @@
 		android:duration="1000"
 		android:fromYDelta="0%"
 		android:interpolator="@android:anim/overshoot_interpolator"
-		android:toYDelta="100%" />
+		android:toYDelta="-100%" />
 
-	<alpha
-		android:duration="500"
-		android:fromAlpha="1.0"
-		android:interpolator="@android:anim/linear_interpolator"
-		android:toAlpha="0.0" />
+	<!-- <alpha -->
+	<!-- android:duration="500" -->
+	<!-- android:fromAlpha="1.0" -->
+	<!-- android:interpolator="@android:anim/linear_interpolator" -->
+	<!-- android:toAlpha="0.0" /> -->
+
 
 </set>

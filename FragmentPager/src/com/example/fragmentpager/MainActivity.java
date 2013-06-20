@@ -37,10 +37,12 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private void addFragment(Fragment hostingFragment) {
+		Fragment current = getSupportFragmentManager().findFragmentByTag(CURRENT_FRAGMENT);
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
-		transaction.addToBackStack(null);
-		transaction.replace(R.id.fragmentSpace, hostingFragment, CURRENT_FRAGMENT);
+		transaction.setCustomAnimations(R.anim.slide_up_and_fadein, R.anim.slide_up_and_fadeout, R.anim.slide_down_and_fadein, R.anim.slide_down_and_fadeout);
+		transaction.addToBackStack(CURRENT_FRAGMENT);
+		transaction.add(R.id.fragmentSpace, hostingFragment, CURRENT_FRAGMENT);
+		if (current != null) transaction.hide(current);
 		transaction.commit();
 	}
 
